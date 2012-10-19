@@ -8,7 +8,7 @@ class Landing extends CI_Controller {
 	
 	function index() 
 	{
-		$data['query'] = $this->db->get('pages');
+		$data['query'] = $this->db->get('olb_pages');
 		echo $this->load->view('landing_view', $data);
 	}
 }

@@ -9,6 +9,7 @@ class Services extends CI_Controller {
 	
 	function index() {		
 		$data['title'] = "List of Services";
+		$data['menu'] = $this->db->get('olb_pages');
 		$this->load->view('main_view', $data);
 	}	
 	

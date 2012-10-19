@@ -5,15 +5,12 @@
 	<meta name="language" content="en" />
 
 	<link rel="stylesheet" type="text/css" href="/application/css/main.css" />
-	<script type="text/javascript" src="/application/js/jquery-1.8.2.js"></script>
 </head>
 
 <body>
 
 <div id="page" class="shadow">
-	
-	
-	<div id="left">	
+	<div id="left">
 		<div id="logo">
 		<img src="/application/images/logo_small.png" alt="One Love Bodywork"/>
 		</div><!-- logo -->
@@ -21,7 +18,7 @@
 		<div id="menu">
 		<ul>
 		<?php foreach($menu->result() as $row): ?>	
-		<?php echo "<li id=\"$row->name\">".anchor("#", $row->title); ?></li>
+		<li><?php echo anchor("$row->name", $row->title); ?></li>
 		<?php endforeach ?>
 		</ul>
 		</div><!-- menu -->
@@ -32,16 +29,25 @@
 		</div><!-- footer -->
 	</div><!-- left -->
 	
-	
 	<div id="right">
 		<div id="title">
 			<?php echo $title; ?>
-		</div><!-- title -->
-		
-		<div id="content">			
-		</div><!-- content -->
-	</div><!-- right -->	
+		</div>
+		<div id="booking">
+			<?php form_open('booking/create_booking'); ?>
+			Date: <input type="text" id="date" /> 
+			Time: <input type="time" id="time" />
+			<br />
+			Type of Service: <select id="service">
+								<?php foreach($services->result() as $row): ?>
+								<option value="<?php echo $row->id;?>"><?php echo "$row->name, $row->length minutes, $row->rate";?></option>
+								<?php endforeach ?>
+							 </select>
+			</form>
+		</div>
+	</div>
 	
+
 		
 </div><!-- page -->
 
