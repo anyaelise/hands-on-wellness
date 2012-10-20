@@ -8,14 +8,24 @@ class Main extends CI_Controller {
 		$this->load->helper('form');
 	}
 	
-	function index() {
-		$data['menu'] = $this->db->get('olb_pages');
-		$this->load->view('main_view', $data);
+	function index($page) {
+		if(!isset($page)) {
+			$data['menu'] = $this->db->get('olb_pages');
+			$this->load->view('main_view', $data);
+		}
+		else {
+			changePage($page);
+		}
 	}
 	
-	function services () {
+	function services() {
 		$data['title'] = "List of Services";
 		$data['menu'] = $this->db->get('olb_pages');
-		$this->load->view('main_view', $data);
+		$this->load->view('services_view', $data);
+	}
+	
+	function changePage($page) {
+		$data['menu'] = $this->db->get('olb_pages');
+		$this->load->view($page.'_view', $data);
 	}
 }

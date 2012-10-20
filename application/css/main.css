@@ -43,8 +43,8 @@ body
 	padding: 10px 0px;
 	text-align: center; 
 	border-radius: 10px;
-	/*background: url(purplebg_small.png) repeat-x left top;*/
 	background: #cccccc;
+	cursor:pointer;
 }
 
 #menu ul li a {

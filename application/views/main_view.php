@@ -6,6 +6,15 @@
 
 	<link rel="stylesheet" type="text/css" href="/application/css/main.css" />
 	<script type="text/javascript" src="/application/js/jquery-1.8.2.js"></script>
+	<script type="text/javascript">
+	
+		var changeContent = function(page) {
+			var new_content = "<?php echo site_url()."/main/index/";?>"+page;
+			alert(new_content);
+			$('#right').load(new_content);
+		};
+	 
+	</script>
 </head>
 
 <body>
@@ -21,7 +30,7 @@
 		<div id="menu">
 		<ul>
 		<?php foreach($menu->result() as $row): ?>	
-		<?php echo "<li id=\"$row->name\">".anchor("#", $row->title); ?></li>
+		<?php echo "<li id=\"$row->name\" onClick=changeContent(\"$row->name\")>".anchor(site_url()."/main/index/#", $row->title); ?></li>
 		<?php endforeach ?>
 		</ul>
 		</div><!-- menu -->
@@ -34,12 +43,6 @@
 	
 	
 	<div id="right">
-		<div id="title">
-			<?php echo $title; ?>
-		</div><!-- title -->
-		
-		<div id="content">			
-		</div><!-- content -->
 	</div><!-- right -->	
 	
 		
