@@ -1,4 +1,7 @@
+<div id="title">
+	<h1><?php echo "List of Services"; ?></h1>
+</div><!-- title -->
 
-		<div id="title">
-			<?php echo "List of Services;" ?>
-		</div>
+<div id="services">
+	
+</div><!-- services -->
