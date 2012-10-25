@@ -18,7 +18,7 @@
 	<div id="menu">
 		<ul>
 		<?php foreach($query->result() as $row): ?>	
-		<li><?php echo anchor("$row->name", $row->title); ?></li>
+		<li><?php echo anchor(site_url()."/main/index/$row->name", $row->title); ?></li>
 		<?php endforeach ?>
 		</ul>
 	</div><!-- menu -->

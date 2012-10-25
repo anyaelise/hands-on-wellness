@@ -8,12 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="/application/css/main.css" />
 	<script type="text/javascript" src="/application/js/jquery-1.8.2.js"></script>
 	<script type="text/javascript">
-	
+	$(document).ready(function(){	
 		var changeContent = function(page) {
 			var new_content = "<?php echo site_url()."/main/";?>"+page;
 			$('#right').load(new_content);
 		};
-	 
+		
+		changeContent('<?php echo $page; ?>');
+	 });
 	</script>
 </head>
 
@@ -30,13 +32,13 @@
 		<div id="menu">
 		<ul>
 		<?php foreach($menu->result() as $row): ?>	
-		<?php echo "<li onClick=changeContent(\"$row->name\")>".anchor(site_url()."/main/index/#", $row->title); ?></li>
+		<?php echo "<li onClick=changeContent(\"$row->name\")>".anchor(site_url()."/main/index/$row->name", $row->title)."</li>"; ?>
 		<?php endforeach ?>
 		</ul>
 		</div><!-- menu -->
 		
 		<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by <a href="#">One Love Bodywork, LLC</a>.<br/>
+		Copyright &copy; <?php echo date('Y'); ?> by <?php echo anchor(site_url()."/main/index/about", "One Love Bodywork, LLC");?><br/>
 		All Rights Reserved.<br/>
 		</div><!-- footer -->
 	</div><!-- left -->
