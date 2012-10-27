@@ -3,18 +3,25 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
+	
+	<title>One Love Bodywork</title>
 
 	<link rel="icon" type="image/png" href="/application/images/favicon.png" />
+	
 	<link rel="stylesheet" type="text/css" href="/application/css/main.css" />
+	<link href="/application/css/redmond/jquery-ui-1.9.1.custom.css" rel="stylesheet">
+	
 	<script type="text/javascript" src="/application/js/jquery-1.8.2.js"></script>
+	<script src="/application/js/jquery-ui-1.9.1.custom.js"></script>
+		
 	<script type="text/javascript">
 	$(document).ready(function(){	
-		var changeContent = function(page) {
-			var new_content = "<?php echo site_url()."/main/";?>"+page;
+		var changeContent = function(page_id) {
+			var new_content = "<?php echo site_url()."/main/";?>"+page_id;
 			$('#right').load(new_content);
 		};
 		
-		changeContent('<?php echo $page; ?>');
+		changeContent('<?php echo $page_id; ?>');
 	 });
 	</script>
 </head>

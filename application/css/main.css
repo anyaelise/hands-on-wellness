@@ -103,6 +103,15 @@ p {
 
 #about { }
 
+#services {
+	border:none;
+}
+
+#services div {
+	font: "Trebuchet MS";
+	font-size: 1em;
+}
+
 .directions {
 	font-style:italic;	
 }
