@@ -4,9 +4,10 @@
 	<br>
 </div><!-- title -->
 
-<div id="booking">
+<div id="booking">	
 	<?php 
-	echo "<p id='booking_errors'>".validation_errors()."</p>";
+	echo validation_errors();
+
 	echo form_open('main/booking/create');	
 	$dropdown_default = "Select";
 	echo "<p> First Name: ".form_input('first_name','')." Last Name: ".form_input('last_name', '')." </p>";

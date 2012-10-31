@@ -71,6 +71,7 @@ class Main extends CI_Controller {
 				$this->form_validation->set_rules('email', 'Email', 'required');
 				$this->form_validation->set_rules('phone', 'Telephone number', 'required');
 				$this->form_validation->set_rules('address', 'Address', 'required');
+				$this->form_validation->set_error_delimiters('<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>', '</p>');
 				if ($this->form_validation->run() == FALSE) {
 					$this->load->view('booking_view', $data);
 				}
