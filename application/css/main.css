@@ -30,7 +30,7 @@ p {
 	display:inline;
 	position: relative;
 	float: left;
-	width: 25%; height: 100%;
+	width: 20%; height: 100%;
 	background: #000;
 	-moz-border-radius-topleft: 10px; -webkit-border-top-left-radius: 10px; -khtml-border-top-left-radius: 10px; border-top-left-radius: 10px;
 	-moz-border-radius-bottomleft: 10px; -webkit-border-bottom-left-radius: 10px; -khtml-border-bottom-left-radius: 10px; border-bottom-left-radius: 10px;
@@ -47,7 +47,7 @@ p {
 }
 
 #menu ul li {
-	width: 45%; margin: 15px auto;
+	width: 55%; margin: 15px auto;
 	padding: 10px 0px;
 	text-align: center; 
 	border-radius: 10px;
@@ -86,7 +86,7 @@ p {
 	display: inline;
 	position: relative;
 	float: left;
-	width: 75%;
+	width: 80%;
 }
 
 #title
@@ -107,9 +107,28 @@ p {
 	border:none;
 }
 
+#services ul li 
+{
+	font-family:Pristina;
+	font-size: 1.5em;
+}
+
+#services h3 
+{
+	font-family:Pristina;
+	font-size: 1.3em;
+	padding: 0;
+	margin: 0;
+}
+
 #services div {
-	font: "Trebuchet MS";
-	font-size: 1em;
+	font-family: "Trebuchet MS";
+	font-size: 0.9em;
+}
+
+#services p {
+	font-family:"Lucida Grande";
+	width: 100%;
 }
 
 .directions {

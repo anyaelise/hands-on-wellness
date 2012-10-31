@@ -24,22 +24,49 @@
 
 <body>
 
-<div id="title">
-	<h1><?php echo "List of Services"; ?></h1>
-</div><!-- title -->
-
 <div id="services">
 	<ul>
 		<li><a href="#services-1">Signature Four Hand Services</a></li>
 		<li><a href="#services-2">Targeted Four Hand Services </a></li>
-		<li><a href="#services-3">Solo Therapist Services</a></li>
+		<li><a href="#services-3">Single Therapist Services</a></li>
 	</ul>
 	<div id="services-1"> 
-	<?php foreach($services->result() as $row) {
-			echo "$row->name <br>";
+	<?php foreach($services as $key => $val) {
+			if($val == 1) {
+				echo "<h3>$key</h3>";
+				echo "<p>$descs[$key]</p>";
+				foreach($rates[$key] as $length => $rate) {
+					echo "<div class=\"rates\">$length minutes \$$rate</div>";
+				}
+				echo "<br>";
+			}
  		  }	
 	?>
 	</div>
-	<div id="services-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
-	<div id="services-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+	<div id="services-2">
+	<?php foreach($services as $key => $val) {
+			if($val == 2) {
+				echo "<h3>$key</h3>";
+				echo "<p>$descs[$key]</p>";
+				foreach($rates[$key] as $length => $rate) {
+					echo "<div class=\"rates\">$length minutes \$$rate</div>";
+				}
+				echo "<br>";
+			}
+ 		  }	
+	?>
+	</div>
+	<div id="services-3">
+	<?php foreach($services as $key => $val) {
+			if($val == 3) {
+				echo "<h3>$key</h3>";
+				echo "<p>$descs[$key]</p>";
+				foreach($rates[$key] as $length => $rate) {
+					echo "<div class=\"rates\">$length minutes \$$rate</div>";
+				}
+				echo "<br>";
+			}
+ 		  }	
+	?>	
+	</div>
 </div><!-- services -->

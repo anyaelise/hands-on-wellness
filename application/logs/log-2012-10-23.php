@@ -1001,3 +1001,35 @@ DEBUG - 2012-10-23 21:33:34 --> Helper loaded: form_helper
 DEBUG - 2012-10-23 21:33:34 --> File loaded: application/views/booking_view.php
 DEBUG - 2012-10-23 21:33:34 --> Final output sent to browser
 DEBUG - 2012-10-23 21:33:34 --> Total execution time: 0.1114
+DEBUG - 2012-10-23 21:59:39 --> Config Class Initialized
+DEBUG - 2012-10-23 21:59:39 --> Hooks Class Initialized
+DEBUG - 2012-10-23 21:59:39 --> Utf8 Class Initialized
+DEBUG - 2012-10-23 21:59:39 --> UTF-8 Support Enabled
+DEBUG - 2012-10-23 21:59:39 --> URI Class Initialized
+DEBUG - 2012-10-23 21:59:39 --> Router Class Initialized
+DEBUG - 2012-10-23 21:59:39 --> Output Class Initialized
+DEBUG - 2012-10-23 21:59:39 --> Security Class Initialized
+DEBUG - 2012-10-23 21:59:39 --> Input Class Initialized
+DEBUG - 2012-10-23 21:59:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-10-23 21:59:39 --> Language Class Initialized
+DEBUG - 2012-10-23 21:59:39 --> Loader Class Initialized
+DEBUG - 2012-10-23 21:59:39 --> Database Driver Class Initialized
+DEBUG - 2012-10-23 21:59:40 --> Controller Class Initialized
+DEBUG - 2012-10-23 21:59:40 --> Helper loaded: url_helper
+DEBUG - 2012-10-23 21:59:40 --> Helper loaded: form_helper
+DEBUG - 2012-10-23 21:59:41 --> Config Class Initialized
+DEBUG - 2012-10-23 21:59:41 --> Hooks Class Initialized
+DEBUG - 2012-10-23 21:59:41 --> Utf8 Class Initialized
+DEBUG - 2012-10-23 21:59:41 --> UTF-8 Support Enabled
+DEBUG - 2012-10-23 21:59:41 --> URI Class Initialized
+DEBUG - 2012-10-23 21:59:41 --> Router Class Initialized
+DEBUG - 2012-10-23 21:59:41 --> Output Class Initialized
+DEBUG - 2012-10-23 21:59:41 --> Security Class Initialized
+DEBUG - 2012-10-23 21:59:41 --> Input Class Initialized
+DEBUG - 2012-10-23 21:59:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-10-23 21:59:41 --> Language Class Initialized
+DEBUG - 2012-10-23 21:59:41 --> Loader Class Initialized
+DEBUG - 2012-10-23 21:59:41 --> Database Driver Class Initialized
+DEBUG - 2012-10-23 21:59:41 --> Controller Class Initialized
+DEBUG - 2012-10-23 21:59:41 --> Helper loaded: url_helper
+DEBUG - 2012-10-23 21:59:41 --> Helper loaded: form_helper

@@ -1,40 +1,30 @@
 <?php
 
 class Service extends CI_Model {
-	var $name = "";
-	var $description = "";
-	var $rates = array();
-	
-	function __construct($name) {
+	function __construct() {
 		parent::__construct();
-		$this->name = $name;
 	}
 	
-	function get_name() {
-		return $this->name;
-	}
-	
-	function get_desc() {
-		return $this->description;
-	}
-	
-	function set_desc() {
+	function get_desc($name) {
 		$this->db->select('description');
 		$this->db->distinct();
-		$this->db->where('name', $this->name); 
+		$this->db->where('name', $name); 
 		$query = $this->db->get('olb_services'); 
-		$result = $query->result();
+		$result = $query->row();
 		
-		$this->description = $result->name;
+		return $result->description;
 	}
 	
-	function get_rates() {
-		return $this->rates;
-	}
-	
-	function set_rates() {
+	function get_rates($name) {
+		$rates = array(); 
+		$this->db->select('length, rate');
+		$this->db->where('name', $name);
+		$this->db->where('name', $name);
+		$query = $this->db->get('olb_services'); 
 		
+		foreach ($query->result() as $row) {
+			$rates[$row->length] = $row->rate;
+		}
+		return $rates;
 	}
-	
-	
 }

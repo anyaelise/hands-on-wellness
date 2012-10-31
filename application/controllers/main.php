@@ -6,14 +6,15 @@ class Main extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->helper('form');
+		$this->load->library('session');
 	}
 	
-	function index($page) {
-		if(isset($page)) {
-			 $data['page'] = $page;
+	function index($page_id) {
+		if(isset($page_id)) {
+			 $data['page_id'] = $page_id;
 		}
 		else {
-			$data['page'] = 'about';
+			$data['page_id'] = 'about';
 		}
 		$data['menu'] = $this->db->get('olb_pages');
 		$this->load->view('main_view', $data);
@@ -21,12 +22,24 @@ class Main extends CI_Controller {
 	
 	function services() {
 		$data['title'] = "List of Services";
-		$data['menu'] = $this->db->get('olb_pages');			
-		$data['services'] = $this->db->get('olb_services');
+		$this->load->model('Service');
+		$data['services'] = array();
+		$data['descs'] = array();
+		$data['rates'] = array();
+		
+		$this->db->select('name, priority');
+		$this->db->distinct();
+		$query = $this->db->get('olb_services');
+		foreach($query->result() as $row) {
+			$data['services'][$row->name] = $row->priority;
+			$data['descs'][$row->name] = $this->Service->get_desc($row->name);
+			$data['rates'][$row->name] = $this->Service->get_rates($row->name);
+		}
+		
 		$this->load->view('services_view', $data);
 	}
 	
-	function booking($status) {
+	function booking($status) { 
 		$data['title'] = "Make A Reservation";
 		$data['menu'] = $this->db->get('olb_pages');		
 		$data['services'] = $this->db->get('olb_services');
@@ -42,10 +55,16 @@ class Main extends CI_Controller {
 		
 		if(isset($status)) {
 			if($status == "create") {
-				$data['page'] = "booking/validate";
-				/*$this->load->view('main_view', $data);
+				$postarray["postdata"] = array();
+				foreach($_POST as $key=>$val) {
+					$postarray["postdata"][$key] = $val;
+				}
+				$this->session->set_userdata($postarray);
+				$data['page_id'] = "booking/validate";
+				$this->load->view('main_view', $data);				 
 			}
-			else if($status == "validate") {*/
+			else if($status == "validate") {
+				$_POST = $this->session->userdata('postdata');
 				$this->load->library('form_validation');
 				$this->form_validation->set_rules('first_name', 'First Name', 'required');
 				$this->form_validation->set_rules('last_name', 'Last Name', 'required');
