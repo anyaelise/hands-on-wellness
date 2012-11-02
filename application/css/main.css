@@ -103,6 +103,42 @@ p {
 
 #about { }
 
+#booking label 
+{
+	font-family:"Courier New";
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#basic_info label
+{
+	padding-right: 82px;
+}
+
+#customizations label
+{
+	
+}
+
+#booking input 
+{
+	margin-right: 15px;
+	font-family:"Courier New";
+	font-size: 12px;
+}
+
+#booking select 
+{
+	font-family:"Courier New";
+	font-size: 12px;
+}
+
+#validation_errors
+{
+	width: 50%;
+	margin-left: 45px;
+}
+
 #services {
 	border:none;
 }
