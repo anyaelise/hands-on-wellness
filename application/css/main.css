@@ -3,8 +3,8 @@ body
 	margin: 0;
 	padding: 0;
 	color: #555;
-	font: normal 10pt Arial,Helvetica,sans-serif;
 	background: #EFEFEF;
+	font: 75% "Trebuchet MS", sans-serif;
 }
 
 p {
@@ -15,10 +15,14 @@ p {
 	margin: auto;
 }
 
+dt {
+	font-weight: bold;
+}
+
 #page
 {
 	background-color: rgba(255,255,255,1.0);
-	width: 80%;
+	width: 1080px;
 	margin: auto;
 	margin-top: 20px;
 	height: 600px;
@@ -40,6 +44,7 @@ p {
 	margin-top: 40px;
 }
 
+
 #menu ul {
 	-webkit-padding-start: 0;
 	list-style:none;
@@ -50,25 +55,23 @@ p {
 	width: 55%; margin: 15px auto;
 	padding: 10px 0px;
 	text-align: center; 
-	border-radius: 10px;
-	background: #cccccc;
+	border-radius: 5px;
+	background: #cccccc url(smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;
 	cursor:pointer;
 }
 
 #menu ul li a {
 	color:#000;
 	text-decoration: none;
-	font-family:Papyrus;
-	font-size:16px;
-}
-
-#menu ul li a:hover {
-	color: #ffffff;
+	font-family:Pristina;
+	font-size:20px;
 }
 
 #logo {
 	width: 174px;
 	margin: 10px auto;
+	padding-bottom: 20px;
+	box-shadow: 0px 1px #888888;
 }
 
 #footer
@@ -79,6 +82,10 @@ p {
 	bottom: 5px;
 	font-size: 0.8em;
 	text-align: center;
+}
+
+#footer a:visited {
+	color: #cccccc;
 }
 
 #right 
@@ -92,42 +99,55 @@ p {
 #title
 {
 	text-align: center;
-	margin-top: 5px;
+	margin: 0;
+	padding: 0;
 }
 
 #title h1 {
 	font-size: 36px;
 	font-family:Pristina;
-	color: #800080;
+	color:#800080;
+	margin-top:10px;
+	margin-bottom:5px;
+	padding: 0;
 }
-
-#about { }
 
 #booking label 
 {
-	font-family:"Courier New";
-	font-size: 12px;
 	font-weight: bold;
+}
+
+#basic_info p,label,input,select
+{
+	font-family:"Courier New" ! important;
+	font-size: 12px ! important;
+	text-align: left;
 }
 
 #basic_info label
 {
+	margin: 0;
 	padding-right: 82px;
 }
 
-#customizations label
-{
-	
-}
-
-#booking input 
+#basic_info input
 {
 	margin-right: 15px;
-	font-family:"Courier New";
-	font-size: 12px;
+	margin-bottom: 10px;
 }
 
-#booking select 
+#customizations p,label,input,select
+{
+	font-family:"Courier New" ! important;
+	font-size: 12px ! important;
+}
+
+#customizations select
+{
+	margin-bottom: 5px;
+}
+
+#allergy_info p,label,input,select
 {
 	font-family:"Courier New";
 	font-size: 12px;
@@ -135,8 +155,44 @@ p {
 
 #validation_errors
 {
-	width: 50%;
+	width: 60%;
 	margin-left: 45px;
+	margin-bottom: 10px;
+}
+
+#submit_button input
+{
+	margin-top: 5px;
+	font-family:Pristina ! important;
+	font-size: 1.5em ! important;
+}
+
+#about {
+	border:none;
+}
+
+#about ul li 
+{
+	font-family:Pristina;
+	font-size: 1.5em;
+}
+
+#about h3 
+{
+	font-family:Pristina;
+	font-size: 1.2em;
+	padding: 0;
+	margin: 0;
+	font-weight:normal;
+	background: #ccc;
+	border-radius: 10px;
+	padding-left: 5px;
+}
+
+#about p {
+	font-family:"Trebuchet MS";
+	font-size: 0.9em;
+	width: 95%;
 }
 
 #services {
@@ -155,20 +211,89 @@ p {
 	font-size: 1.3em;
 	padding: 0;
 	margin: 0;
-}
-
-#services div {
-	font-family: "Trebuchet MS";
-	font-size: 0.9em;
+	font-weight:normal;
+	background: #ccc;
+	border-radius: 10px;
+	padding-left: 5px;
 }
 
 #services p {
-	font-family:"Lucida Grande";
+	font-family:"Trebuchet MS";
+	font-size: 0.9em;
+	text-align:left;
 	width: 100%;
 }
 
+#booking {
+	border:none;
+}
+
+#booking ul li 
+{
+	font-family:Pristina;
+	font-size: 1.5em;
+}
+
+#booking h3 
+{
+	font-family:Pristina;
+	font-size: 1.2em;
+	padding: 0;
+	margin: 0;
+	font-weight:normal;
+	background: #ccc;
+	border-radius: 10px;
+	padding-left: 5px;
+}
+
+#booking p
+{
+	width: 95%;
+}
+
+#contact {
+	border:none;
+}
+
+#contact ul li 
+{
+	font-family:Pristina;
+	font-size: 1.5em;
+}
+
+#contact h3 
+{
+	font-family:Pristina;
+	font-size: 1.3em;
+	padding: 0;
+	margin: 0;
+	font-weight:normal;
+	background: #ccc;
+	border-radius: 10px;
+	padding-left: 5px;
+}
+
+#contact p {
+	font-family:"Trebuchet MS";
+	font-size: 0.9em;
+	text-align:left;
+	width: 90%;
+}
+
 .directions {
+	font-family:"Trebuchet MS" ! important;
+	font-size: 0.9em ! important;
 	font-style:italic;	
+	margin-bottom: 5px;
+	background: #ccc;
+	border-radius: 10px;
+	padding-left: 5px;
+}
+
+.rates {
+	font-style: italic;
+	text-align: right ! important;
+	padding-right: 10px;
 }
 
 .shadow {
@@ -176,3 +301,8 @@ p {
 	-webkit-box-shadow: 10px 10px 5px #888;
 	box-shadow: 10px 10px 5px #888;
 }
+
+.menu-hover {
+	background: #e6e6e6 url(smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x ! important;
+}
+

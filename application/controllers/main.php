@@ -16,6 +16,7 @@ class Main extends CI_Controller {
 		else {
 			$data['page_id'] = 'about';
 		}
+		$this->db->where('id >', 1);
 		$data['menu'] = $this->db->get('olb_pages');
 		$this->load->view('main_view', $data);
 	}
@@ -41,6 +42,7 @@ class Main extends CI_Controller {
 	
 	function booking($status) { 
 		$data['title'] = "Make A Reservation";
+		$this->db->where('id >', 1);
 		$data['menu'] = $this->db->get('olb_pages');		
 		$data['services'] = $this->db->get('olb_services');
 		
@@ -70,13 +72,17 @@ class Main extends CI_Controller {
 				$this->load->library('form_validation');
 				$this->form_validation->set_rules('first_name', 'First Name', 'required');
 				$this->form_validation->set_rules('last_name', 'Last Name', 'required');
-				$this->form_validation->set_rules('email', 'Email', 'required');
+				$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 				$this->form_validation->set_rules('phone', 'Telephone number', 'required');
 				$this->form_validation->set_rules('address', 'Address', 'required');
+				$this->form_validation->set_rules('service', 'Type of Service', 'required');
 				$this->form_validation->set_error_delimiters('<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>', '</p>');
 				if ($this->form_validation->run() == FALSE) {
 					$data['errors'] = 1;
 					$this->load->view('booking_view', $data);
+				}
+				else {
+					$this->load->view('booking_success', $this->session->userdata('postdata'));
 				}
 			}
 		}
@@ -90,4 +96,7 @@ class Main extends CI_Controller {
 		$this->load->view('about_view', $data);
 	}
 	
+	function contact() {
+		$this->load->view('contact_view');
+	}
 }

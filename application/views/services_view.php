@@ -8,7 +8,7 @@
 	<link rel="icon" type="image/png" href="/application/images/favicon.png" />
 	
 	<link rel="stylesheet" type="text/css" href="/application/css/main.css" />
-	<link href="/application/css/redmond/jquery-ui-1.9.1.custom.css" rel="stylesheet">
+	<link href="/application/css/smoothness/jquery-ui-1.9.1.custom.css" rel="stylesheet">
 	
 	<script type="text/javascript" src="/application/js/jquery-1.8.2.js"></script>
 	<script src="/application/js/jquery-ui-1.9.1.custom.js"></script>
@@ -36,7 +36,7 @@
 				echo "<h3>$key</h3>";
 				echo "<p>$descs[$key]</p>";
 				foreach($rates[$key] as $length => $rate) {
-					echo "<div class=\"rates\">$length minutes \$$rate</div>";
+					echo "<p class=\"rates\">$length minutes - \$$rate &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>";
 				}
 				echo "<br>";
 			}
@@ -49,7 +49,7 @@
 				echo "<h3>$key</h3>";
 				echo "<p>$descs[$key]</p>";
 				foreach($rates[$key] as $length => $rate) {
-					echo "<div class=\"rates\">$length minutes \$$rate</div>";
+					echo "<p class=\"rates\">$length minutes - \$$rate &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>";
 				}
 				echo "<br>";
 			}
@@ -62,7 +62,7 @@
 				echo "<h3>$key</h3>";
 				echo "<p>$descs[$key]</p>";
 				foreach($rates[$key] as $length => $rate) {
-					echo "<div class=\"rates\">$length minutes \$$rate</div>";
+					echo "<p class=\"rates\">$length minutes - \$$rate &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>";
 				}
 				echo "<br>";
 			}

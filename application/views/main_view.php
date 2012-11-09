@@ -9,19 +9,27 @@
 	<link rel="icon" type="image/png" href="/application/images/favicon.png" />
 	
 	<link rel="stylesheet" type="text/css" href="/application/css/main.css" />
-	<link href="/application/css/redmond/jquery-ui-1.9.1.custom.css" rel="stylesheet">
+	<link href="/application/css/smoothness/jquery-ui-1.9.1.custom.css" rel="stylesheet">
 	
 	<script type="text/javascript" src="/application/js/jquery-1.8.2.js"></script>
 	<script src="/application/js/jquery-ui-1.9.1.custom.js"></script>
 		
 	<script type="text/javascript">
+	var changeContent = function(page_id) {
+		var new_content = "<?php echo site_url()."/main/";?>"+page_id;
+		$('#right').load(new_content);
+	};
 	$(document).ready(function(){	
-		var changeContent = function(page_id) {
-			var new_content = "<?php echo site_url()."/main/";?>"+page_id;
-			$('#right').load(new_content);
-		};
-		
 		changeContent('<?php echo $page_id; ?>');
+		
+		$( "#menu ul li" ).hover(
+			function() {
+				$( this ).addClass( "menu-hover" );
+			},
+			function() {
+				$( this ).removeClass( "menu-hover" );
+			}
+		);
 	 });
 	</script>
 </head>
@@ -33,7 +41,7 @@
 	
 	<div id="left">	
 		<div id="logo">
-		<img src="/application/images/logo_small.png" alt="One Love Bodywork"/>
+		<a href="/"><img src="/application/images/logo_small.png" alt="One Love Bodywork"/></a>
 		</div><!-- logo -->
 		
 		<div id="menu">
@@ -45,7 +53,7 @@
 		</div><!-- menu -->
 		
 		<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by <?php echo anchor(site_url()."/main/index/about", "One Love Bodywork, LLC");?><br/>
+		Copyright &copy; <?php echo date('Y'); ?> by <br><?php echo anchor(site_url()."/main/index/about", "One Love Bodywork, LLC");?><br/>
 		All Rights Reserved.<br/>
 		</div><!-- footer -->
 	</div><!-- left -->
