@@ -12,7 +12,7 @@
 <div id="page" class="shadow">
 
 	<div id="header">
-		<div id="logo"><img src="/application/images/logo.png" alt="One Love Bodywork"/></div>	
+		<div id="logo"><img src="/application/images/new_logo.png" alt="One Love Bodywork"/></div>	
 	</div><!-- header -->
 	
 	<div id="menu">
