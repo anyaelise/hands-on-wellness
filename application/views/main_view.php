@@ -41,7 +41,7 @@
 	
 	<div id="left">	
 		<div id="logo">
-		<a href="/"><img src="/application/images/logo_small.png" alt="One Love Bodywork"/></a>
+		<a href="/"><img src="/application/images/new_logo_small.png" alt="One Love Bodywork"/></a>
 		</div><!-- logo -->
 		
 		<div id="menu">
