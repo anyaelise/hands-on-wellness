@@ -3,7 +3,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
-
+	<title>One Love Bodywork</title>
+	<link rel="shortcut icon" type="image/png" href="/application/images/favicon.png?v=2" />
 	<link rel="stylesheet" type="text/css" href="/application/css/landing.css" />
 </head>
 

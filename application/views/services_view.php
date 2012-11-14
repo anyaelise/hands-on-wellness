@@ -68,5 +68,8 @@
 			}
  		  }	
 	?>	
+	<h3>Just Two Hands</h3>
+	<p>Have a single therapist perform any four hands treatment.</p>
+	<p class="rates">50% of four hands price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 	</div>
 </div><!-- services -->

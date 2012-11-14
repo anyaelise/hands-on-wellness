@@ -6,7 +6,7 @@
 	
 	<title>One Love Bodywork</title>
 
-	<link rel="icon" type="image/png" href="/application/images/favicon.png" />
+	<link rel="shortcut icon" type="image/png" href="/application/images/favicon.png?v=2" />
 	
 	<link rel="stylesheet" type="text/css" href="/application/css/main.css" />
 	<link href="/application/css/smoothness/jquery-ui-1.9.1.custom.css" rel="stylesheet">
@@ -36,7 +36,7 @@
 
 <body>
 
-<div id="page" class="shadow">
+<div id="page">
 	
 	
 	<div id="left">	

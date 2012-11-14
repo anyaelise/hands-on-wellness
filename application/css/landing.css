@@ -2,19 +2,22 @@ body
 {
 	margin: 0;
 	padding: 0;
-	color: #555;
 	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: rgba(193,205,193,0.85);
+	background: url(pagebg.jpg);
 	background-size:cover;
 }
 
 #page
 {
-	width: 50%;
-	margin: 50px auto;
-	background-color: rgba(255,255,255,0.85);
-	border: 1px solid #ffffff;
-	border-radius: 15px;
+	width: 570px;
+	margin: 30px auto;
+	/*margin-left: 200px;*/
+	margin-top: 100px;
+	margin-bottom: 10px;
+	padding-top: 20px;
+	background-color: rgba(205,201,201,0.3);
+	border: 1px solid #8b8989;
+	border-radius: 10px;
 }
 
 #header
@@ -27,53 +30,53 @@ body
 #logo
 {
 	display: block;
-	width:579px;
+	width:550px;
 	margin: auto;
-	padding: 50px 50px 0px 50px;
+	padding: 0;
 }
 
 #menu 
 {
-	width: 360px;
+	width: 365px;
 	margin-top: 0px;
 	margin-left: auto;	
 	margin-right: auto;
 	margin-bottom: 20px;
 	padding: 0px;
-	background: url(blackbg.png) repeat-x left top;
+	background: url(greenbg.png) repeat-x left top;
 	border: 0px white;
+	/*border: 1px solid #8b8989;*/
 	border-radius: 15px;
+	/*box-shadow: 0 0 1px #888;*/
 }
 
 #menu ul 
 {
-	-webkit-padding-start: 0;
-	margin:0px;
-	padding:0px;
+	-webkit-padding-start: 10px;
+	-moz-padding-start: 10px;
+	margin:auto;
 }
 
 #menu ul li
 {
 	display: inline;
-	color: #E580FF;
 }
 
 #menu ul li a
 {
-	color:#ffffff;
+	color:#fff;
 	background-color:transparent;
-	font-family:"Goudy Old Style";
-	font-size:18px;
+	font-family:Pristina;
+	font-size:21px;
 	text-decoration:none;
-	padding: 15px 10px 0px 10px;	
-	opacity: 0.8;
+	padding: 0px 15px 0px 10px;	
 }
 
 #menu ul li a:hover 
 {
 	/*color:#E580FF;
 	text-decoration:underline;*/
-	opacity: 1.0;
+	background-color: rgba(255,255,255,0.4);
 }
 
 #footer
@@ -86,5 +89,5 @@ body
 }
 
 .shadow {
-	 box-shadow: 0 0 15px #eeeee0; 
+	 box-shadow: 0 0 5px #B3B3B3; 
 }
