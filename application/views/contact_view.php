@@ -39,7 +39,7 @@
 			<dd>(305) 423-9807</dd>		
 			<br>
 			<dt>Email Address: </dt>
-			<dd>contact@onelovebodywork.org</dd>
+			<dd>contact_us@onelovebodywork.org</dd>
 		</dl>
 	</p>
 	</div>

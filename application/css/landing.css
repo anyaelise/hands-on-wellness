@@ -14,7 +14,7 @@ body
 	/*margin-left: 200px;*/
 	margin-top: 100px;
 	margin-bottom: 10px;
-	padding-top: 20px;
+	padding-top: 10px;
 	background-color: rgba(205,201,201,0.3);
 	border: 1px solid #8b8989;
 	border-radius: 10px;
@@ -32,18 +32,18 @@ body
 	display: block;
 	width:550px;
 	margin: auto;
-	padding: 0;
+	padding-bottom: 22px;
 }
 
 #menu 
 {
-	width: 365px;
+	width: 406px;
 	margin-top: 0px;
 	margin-left: auto;	
 	margin-right: auto;
 	margin-bottom: 20px;
-	padding: 0px;
-	background: url(greenbg.png) repeat-x left top;
+	padding-top: 2px;
+	background: url(greenbg.png) 80% 30% repeat-x;
 	border: 0px white;
 	/*border: 1px solid #8b8989;*/
 	border-radius: 15px;
@@ -52,24 +52,27 @@ body
 
 #menu ul 
 {
-	-webkit-padding-start: 10px;
-	-moz-padding-start: 10px;
+	-webkit-padding-start: 11px;
+	-moz-padding-start: 11px;
 	margin:auto;
 }
 
 #menu ul li
 {
 	display: inline;
+	padding-top: 5px;
 }
 
 #menu ul li a
 {
-	color:#fff;
+	color:#ddd;
 	background-color:transparent;
-	font-family:Pristina;
-	font-size:21px;
+	font-family:Garamond;
+	font-size:20px;
+	/*font-weight: bold;*/
 	text-decoration:none;
 	padding: 0px 15px 0px 10px;	
+	/*text-shadow: 1px 1px #555;*/
 }
 
 #menu ul li a:hover 

@@ -43,7 +43,8 @@ class Main extends CI_Controller {
 	function booking($status) { 
 		$data['title'] = "Make A Reservation";
 		$this->db->where('id >', 1);
-		$data['menu'] = $this->db->get('olb_pages');		
+		$data['menu'] = $this->db->get('olb_pages');	
+		$this->db->order_by('name');	
 		$data['services'] = $this->db->get('olb_services');
 		
 		$this->db->group_by('name');

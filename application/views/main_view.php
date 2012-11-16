@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
 	
-	<title>One Love Bodywork</title>
+	<title>One Love Bodywork - Your four hand massage specialists</title>
 
 	<link rel="shortcut icon" type="image/png" href="/application/images/favicon.png?v=2" />
 	
