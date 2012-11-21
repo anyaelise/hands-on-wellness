@@ -3,15 +3,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
 	
-	<title>One Love Bodywork - Your four hand massage specialists</title>
-
-	<link rel="icon" type="image/png" href="/application/images/favicon.png" />
-	
-	<link rel="stylesheet" type="text/css" href="/application/css/main.css" />
-	<link href="/application/css/smoothness/jquery-ui-1.9.1.custom.css" rel="stylesheet">
-	
-	<script type="text/javascript" src="/application/js/jquery-1.8.2.js"></script>
-	<script src="/application/js/jquery-ui-1.9.1.custom.js"></script>
+	<title>One Love Bodywork - Your four hands massage specialists</title>
 		
 	<script type="text/javascript">
 	$(document).ready(function(){	
@@ -90,7 +82,7 @@
 	$data['size'] = 20;
 	$data['value'] = set_value('date');
 	echo "<p>".form_label('Date: ',date)."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-	echo form_label('Time Window:',time).form_label('Type of Service: ',service);
+	echo form_label('Time Window:',time)."&nbsp;".form_label('Type of Service: ',service);
 	
 	$time_array = array();
 	$time_array[0] = $dropdown_default;
@@ -116,7 +108,7 @@
 		$i++;
 	}
 	echo form_dropdown('service', $service_array, 0)." </p>";
-	echo "<p style=\"text-align: right;\"> ".form_checkbox('single', 'single', FALSE).form_label('Make it a single therapist session for 1/2 price')."<br>".form_label('*Services marked by a \'*\' not included');
+	echo "<p style=\"text-align: right;\"> ".form_checkbox('single', 'single', FALSE).form_label('Make it a single therapist session for 1/2 the price')."<br>".form_label('*Services marked by a \'*\' not included');
 	echo "<br>";
 	?>
 	</div><!-- basic_info -->

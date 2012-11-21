@@ -3,7 +3,7 @@ body
 	margin: 0;
 	padding: 0;
 	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: url(pagebg.jpg);
+	background: url(pagebg.JPG);
 	background-size:cover;
 }
 
@@ -37,7 +37,7 @@ body
 
 #menu 
 {
-	width: 406px;
+	width: 450px;
 	margin-top: 0px;
 	margin-left: auto;	
 	margin-right: auto;
@@ -52,8 +52,8 @@ body
 
 #menu ul 
 {
-	-webkit-padding-start: 11px;
-	-moz-padding-start: 11px;
+	-webkit-padding-start: 30px;
+	-moz-padding-start: 30px;
 	margin:auto;
 }
 

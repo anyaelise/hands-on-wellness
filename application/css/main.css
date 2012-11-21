@@ -4,7 +4,7 @@ body
 	padding: 0;
 	color: #555;
 	/*background: #EFEFEF;*/
-	background: url(pagebg.jpg);
+	background: url(pagebg.JPG);
 	background-size:cover;
 	font: 75% "Trebuchet MS", sans-serif;
 }
@@ -37,7 +37,7 @@ h3 {
 {
 	background-color: rgba(255,255,255,1.0);
 	/*background:transparent;*/
-	width: 1080px;
+	width: 1050px;
 	margin: auto;
 	margin-top: 20px;
 	height: 700px;
@@ -116,6 +116,10 @@ h3 {
 	margin-top: 20px;
 	/*padding-bottom: 10px;*/
 	/*box-shadow: 0px 1px #555;*/
+}
+
+#logo a, img {
+    border:none;
 }
 
 #footer
