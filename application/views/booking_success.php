@@ -1,7 +1,7 @@
 <?php
     $email_to = "sweetjamaican@gmail.com";
-	$email_from = "donotreply@onelovebodywork.org";
-    $email_subject = "One Love Bodywork Reservation Made for $first_name $last_name";
+	$email_from = "donotreply@handsonwellness.org";
+    $email_subject = "Hands On Wellness Reservation Made for $first_name $last_name";
 	
 	$email_message = "Name: $first_name $last_name\n";
 	$email_message .= "Telephone: $phone\n";
@@ -33,9 +33,9 @@
 <br>
 <?php 
 if($outcome == true) {
-	echo "<p>Thank you for making a reservation with One Love Bodywork! ";
+	echo "<p>Thank you for making a reservation with Hands On Wellness! ";
 	echo "A manager will be in touch with you shortly to confirm your request.<br><br>";
-	echo "If you have any questions, please contact us at (954)378-8379 or (305)423-9807.</p>";
+	echo "If you have any questions, please contact us at (305)423-9807.</p>";
 }
 else {
 	echo "Mail not accepted for delivery.";

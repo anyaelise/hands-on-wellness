@@ -14,7 +14,7 @@ class Main extends CI_Controller {
 			 $data['page_id'] = $page_id;
 		}
 		else {
-			$data['page_id'] = 'about';
+			$data['page_id'] = 'services';
 		}
 		$this->db->where('id >', 1);
 		$data['menu'] = $this->db->get('olb_pages');
@@ -35,6 +35,7 @@ class Main extends CI_Controller {
 			$data['services'][$row->name] = $row->priority;
 			$data['descs'][$row->name] = $this->Service->get_desc($row->name);
 			$data['rates'][$row->name] = $this->Service->get_rates($row->name);
+			$data['types'][$row->name] = $this->Service->get_type($row->name);
 		}
 		
 		$this->load->view('services_view', $data);
@@ -71,12 +72,15 @@ class Main extends CI_Controller {
 			else if($status == "validate") {
 				$_POST = $this->session->userdata('postdata');
 				$this->load->library('form_validation');
-				$this->form_validation->set_rules('first_name', 'First Name', 'required');
-				$this->form_validation->set_rules('last_name', 'Last Name', 'required');
-				$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-				$this->form_validation->set_rules('phone', 'Telephone number', 'required');
-				$this->form_validation->set_rules('address', 'Address', 'required');
-				$this->form_validation->set_rules('service', 'Type of Service', 'required');
+				$this->form_validation->set_rules('first_name', 'First Name', 'trim|required');
+				$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
+				$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+				$this->form_validation->set_rules('phone', 'Telephone number', 'trim|required');
+				$this->form_validation->set_rules('date', 'Date', 'required');
+				$this->form_validation->set_rules('time', 'Time Window', 'trim|required');
+				$this->form_validation->set_rules('location', 'Location', 'required');
+				$this->form_validation->set_rules('payment', 'Method of Payment', 'required');
+				$this->form_validation->set_rules('allergies', 'Allergy Considerations', 'required');
 				$this->form_validation->set_error_delimiters('<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>', '</p>');
 				if ($this->form_validation->run() == FALSE) {
 					$data['errors'] = 1;

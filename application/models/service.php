@@ -27,4 +27,14 @@ class Service extends CI_Model {
 		}
 		return $rates;
 	}
+	
+	function get_type($name) {
+		$this->db->select('type');
+		$this->db->distinct();
+		$this->db->where('name', $name); 
+		$query = $this->db->get('olb_services'); 
+		$result = $query->row();
+		
+		return $result->type;
+	}
 }

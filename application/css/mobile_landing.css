@@ -3,9 +3,7 @@ body
 	margin: 0;
 	padding: 0;
 	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: url(pagebg.JPG);
-	background-size:cover;
-	/*height: 100%;*/
+	background: url(mobilebg.png);
 }
 
 #page
@@ -16,7 +14,7 @@ body
 	margin-top: 100px;
 	margin-bottom: 10px;
 	padding-top: 10px;
-	background-color: rgba(205,201,201,0.3);
+	background-color: rgba(205,201,201,0.8);
 	border: 1px solid #8b8989;
 	border-radius: 10px;
 }
